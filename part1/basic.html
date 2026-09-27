@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        external scripts - benefit of a seperate file is that the browser will download it and store it in its cache.
+        other pages that refrence the same script will take it from the cache instead of downloading it, so the file is actually downloaded only once. 
+        
+        That reduces traffic and make pages faster. 
+    </p>
+    <script src="externalScript.js"></script>
+    <script> 
+            "use strict";
+        let a =10;
+        console.log(a)
+        a = 20;
+        console.log(a)
+        let b = 7*a;
+        console.log(b);
+
+        const max = 57,
+             actual = max -13,
+             percentage = actual / max ;
+        console.log(percentage);
+
+        let message;
+        message = "hello! divyansh";
+        // alert(message)
+        // alert(percentage)
+        // num = 5;
+        // console.log(num)
+        // num = 19
+        // console.log(num) , now we are using strict so we cant declare it without let or constant or var ..
+
+        const COLOR_ORANGE = "#FF7F0";
+
+        let color = COLOR_ORANGE;
+        // Capital-named constants are only used as aliases for "hard-coded" values.
+        alert(color);
+
+        const OUR_PLANET = "EARTH";
+        let currentUserName = "name";
+
+        let name = "divyansh";
+        let standard = 12;
+        console.log(name+standard)
+
+
+        let named = "Ilya";
+
+    alert (`hello ${1}`);
+    alert(`hello ${"name"}`);
+    alert(`hello ${named}`);
+
+
+    </script>
+    <!-- // this is way to link your javascript file in html web page/website
+</body> -->
+</html>
