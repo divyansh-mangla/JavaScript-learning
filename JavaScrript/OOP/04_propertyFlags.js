@@ -29,7 +29,7 @@ Object.defineProperty(user, 'id', {
 });
 /// the object with value, writable , enumerable , configurable  - is the descriptor 
 
-user.id = 999;              // silently fails in non-strict mode, throws in strict mode
+user.id = 999;              // silently fails in non-strict mode, throws error in strict mode
 console.log(user.id);       // 101
 console.log(Object.keys(user)); // [] — hidden from enumeration
 delete user.id;              // fails, configurable is false
@@ -77,4 +77,13 @@ Object.defineProperty(locked, 'x', { enumerable: false }); // throws
 
 // clone object with attributes 
 
-let clone = Object.defineProperties({},Object.getOwnPropertyDescriptor(obj));
+console.log(obj);
+
+let clone = {};
+
+Object.defineProperties(clone,Object.getOwnPropertyDescriptors(obj));
+
+
+// Object.preventExtension(obj); forbids additions of new properties
+
+// Object.seal(obj) forbids adding/removing of properties.
