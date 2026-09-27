@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypal Inheritance</title>
+</head>
+<body>
+    <p>
+        Javascript uses Prototypal Inheritance rather than the classical inheritance used in the other language like c++ , Java , C#
+    </p>
+    <p> In JavaScript, objects have a special hidden property [[Prototye]] </p>
+
+    <img src = "javascript_prototype_chain.svg"> 
+    <script>
+        "use strict"
+
+        let user = {
+        name: "John",
+        surname: "Smith",
+        subject:"prototypal inheritance",
+
+        set fullName(value) {
+            [this.name, this.surname] = value.split(" ");
+        },
+
+        get fullName() {
+            return `${this.name} ${this.surname}`;
+        }
+        };
+
+        let admin = {
+            isAdmin: true,
+        __proto__: user,  // admin is a prototype of user 
+        
+        };
+
+        console.log(admin.fullName); // John Smith (*)
+
+        // setter triggers!
+        admin.fullName = "Alice Cooper"; // (**)
+
+        console.log(admin.fullName); // Alice Cooper, state of admin modified /// very importand step 
+        console.log(user.fullName); // John Smith, state of user protected
+
+        /// to understand - every array , string , symbol are prototype of object
+        
+
+        //No matter where the method is found: in an object or its prototype. In a method call, this is always the object before the dot.
+
+        //So, the setter call admin.fullName= uses admin as this, not user.
+
+        console.log(Object.keys(admin));
+
+        for(let key in admin) console.log(key);// will include every property including the inherited one from user prototype 
+
+        // obj.hasOwnProperty(key)
+
+        for (let key in admin ){
+            let isOwn = admin.hasOwnProperty(key);
+
+            if(isOwn) console.log(`ours :${key}`);
+            else console.log(`Inherited: ${key}`); // because we call admin.fullName = "Alice Cooper" it creates some new properties on its own , because it cant overwrite what user have stored as name and surname 
+            // that's why it displaying name , surname as properties also belonging to admin object 
+        }
+    </script>
+</body>
+</html>
