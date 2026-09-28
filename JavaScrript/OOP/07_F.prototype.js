@@ -17,6 +17,7 @@ console.log(Rabbit.constructor);// Rabbit is
 
 Rabbit.prototype = animal ; // it states that " when a new Rabbit is created , assign its [[prototype]] to  animal"
 
+
 let rabbit = new Rabbit("White Rabbit"); // rabbit.__proto__ == animal
 console.log(rabbit.constructor);
 
