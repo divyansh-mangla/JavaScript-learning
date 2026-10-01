@@ -27,3 +27,5 @@ if (result == "ecmascript"){
 else{
     console.log("You don't know? 'ECMAScript'!");
 }
+
+

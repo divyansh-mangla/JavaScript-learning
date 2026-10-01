@@ -34,7 +34,7 @@ class BankAccount {
 
     deposit(amount){
         this.#balance +=amount;
-        return this.balance;
+        return this.#balance;
     }
     getBalance(){
         return` $${this.#balance}`;
