@@ -29,3 +29,4 @@ Object.setPrototypeOf(tesla, genericCar) // genericCar is prototype of tesla .. 
 
 console.log(`tesla:`, tesla)
 console.log(`tesla`, Object.getPrototypeOf(tesla));
+
