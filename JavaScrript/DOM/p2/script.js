@@ -21,6 +21,7 @@ h2.textContent = "Welcome to our Bank";
 let h1 = document.querySelector("h1");
 h1.innerHTML = `<b>WE HAVE THE BEST LOAN OFFERS FOR YOU.</b>`;
 
+
 // let input = document.querySelector('#fname');
 // input.value = 'Mark';
 
