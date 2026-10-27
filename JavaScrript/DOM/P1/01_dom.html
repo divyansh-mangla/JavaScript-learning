@@ -4,17 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <script src = "script1.js"> </script> 
-    <div class = "bigb"> 
+</head><body>
+    
+    <div class = "bigb">
+        <div> 
         <h1 class = "heading"> DOM LEARNING </h1>
         <p> trying to learn dom and javascript</p>
         <p> The document Object Model or DOM for shorts , represents all pafe content as objects that can be modified </p>
          <p> example : documen.body.style.background = "red" </p>
          <p> according to DOM every html tag is an object </p>
          <p> for example document.body is the object representing the body tag </p>
+         </div>
+         <div>
+         <h2 class=" DOM-TREE" > DOM TREE</h2>
+         <p> the backbone of an HTML document is tags
+            . according to the DOM every tag is an object , Nested tags are children of the eclosing one . the text inside a tag is an object as well.
+         </p>
+         <p> All these objects are accessible using JavaScript, and we can use them to modify the page.</p>
+         <p> for example document.body is the object representing the body tag</p>
+         <p> 
+                document.body.style.background = 'red';// make the background red <br>
+                setTimeout(()=> document.body.style.background = '',3000);  // returning to the orginial after 3 sec</p>
+        <p> tags are element nodes and form the tree structure: html tag is at the root , then head tag and body tag are its children, etc<br>
+        </p>
+        <p> AUTOCORRECTION :  if the browser encounters malformed HTML , it automatically corrects it when makeing the DOM. <br>
+        </p>
+        <p> EVERYTHING IN HTML, EVEN COMMENTS , BECOME A PART OF DOM . </p>
+        <P> there are 12 node types. In practice we usually work with 4 of them . <br> 1.document - the entry point into DOM <br> 2.element nodes -HTML-tags, the tree building blocks <br>3. text nodes -contains text<br> 4. comments </P>
+        </div>
+        <div id="DOM-3">
+            <h1> WALKING TO THE DOM</h1>
+            <dl>
+            <dt> 
+                <code>&lt;html&gt;= doucument.doucument.Element</code> 
+            </dt>
+            <p> the topmost document node is document.documentElement. that's the DOM node of the &lt;html&gt; tag</p>
+            <dt>
+             &lt;body&gt; = document.body
+            </dt>
+            <p> Another widely used DOM node is &lt;body&gt; elemetn- document.body</p>
+            <dt>
+                &lt;head&gt; = document.head.
+            </dt>
+            </dl>
+
+            <h2> Childer: childNodes, firstChild ,lastChild</h2>
+        </div>
+
+        <div id="SE" class ="searching element">
+            <h1> SEARCHING: getElement* , querySelector*</h1>
+            <p> if an element has the id attribute , we can get the element using the method <br> 
+            document.getElementById(id) , no matter where it is </p>
+            
+        </div>
+
     </div>
+     <script src = "script1.js"> </script> 
     
 </body>
 </html>

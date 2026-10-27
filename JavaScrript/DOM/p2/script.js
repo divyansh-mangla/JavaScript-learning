@@ -1,5 +1,12 @@
 "use strict";
 
+
+alert(location.href); // shows current URL
+if (confirm("Go to Wikipedia?")) {
+  location.href = "https://wikipedia.org"; // redirect the browser to another URL
+}
+
+
 // let p = document.getElementById("intro");
 // console.log(p);
 
@@ -92,7 +99,7 @@ function renderSelectedSection(selectedTab) {
 
 renderSelectedSection("home-page");
 
-//EVENT HANDLER PROPERTIES
+//EVENT HANDLER PROPERTIES // its not suited for dynamically generated content .// use inline event inside HTML
 let applyButton = document.querySelector(".apply-now-button");
 applyButton.onclick = function () {
   alert("Thank you for applying!");
@@ -108,7 +115,7 @@ applyButton.onmouseout = function () {
   applyButton.style.border = "none";
 };
 
-//The addEventListener() Method
+//The addEventListener() Method // its not suited for dynamically generated content in the web page 
 let header = document.querySelector("header");
 header.addEventListener("mouseover", function () {
   header.style.color = "black";

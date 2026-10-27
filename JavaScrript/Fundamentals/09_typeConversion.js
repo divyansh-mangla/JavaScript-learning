@@ -10,9 +10,9 @@ console.log(typeof value); // boolean
 value = String(value);// now value is a string " true". a false become "false" , null becomes "null"
 //....<<<MAKE SURE TO TYPE "String" , "Number"
 console.log(typeof value);// string
-
+console.log(Number(null));// 0 kinda strange if its nothing how can it be 0 
 // Numeric Converison
-console.log("6"/"2");
+console.log("6"/"2");//3
 let str = "12abc";
 console.log(typeof str)// string
 

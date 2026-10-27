@@ -9,9 +9,11 @@
 // it returns the first argument that's not null/undefined
 
 // a ??b can be return as 
-let a = 5;
-let result = (a!== null && a!== undefined)? a:b;
+let a = null;
+let b = "divyansh";
 
+let result = (a!== null && a!== undefined)? a:b; // !+== = !==
+console.log(result);
 let user;
 console.log(user?? "Anonymous"); // return Anonymous
 
